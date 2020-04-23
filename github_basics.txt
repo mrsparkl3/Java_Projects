@@ -1,0 +1,16 @@
+Basic Commands for Git/Github:
+
+
+#STATUS:
+-git status: it gives you the status of your repo;
+
+
+#ADD FILES:
+-git add <File_Name> : add a file to the actual branch;
+
+
+#COMMIT:
+-git commit -m "Text_here" <File_Name> : Write a commit to a file;
+
+#PUSH:
+-git push -u origin master : push the entire branch to the master branch on github;
