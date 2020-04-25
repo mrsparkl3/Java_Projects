@@ -5,10 +5,6 @@
  */
 package test;
 
-/**
- *
- * @author nb00r
- */
 public class Test {
 
     /**
