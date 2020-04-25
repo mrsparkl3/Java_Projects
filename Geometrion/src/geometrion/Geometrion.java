@@ -26,7 +26,7 @@ public class Geometrion{
 	
 		//Now let's free the memory, c1 and r1 pointers are setted to NULL.
 		c1=null;
-		r1=null;  //grazie di tutto, oggetti.
+		r1=null;  //thanks and bye, variables.
 	}
 
 }
