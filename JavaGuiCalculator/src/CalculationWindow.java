@@ -8,10 +8,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class CalculationWindow {
 
-	private JFrame frame;
+	private JFrame frmGuiCalculator;
 	private JTextField tf_firstNumber;
     private JLabel lbl_message;
     private JTextField tf_secondNumber;
@@ -27,7 +28,7 @@ public class CalculationWindow {
 			public void run() {
 				try {
 					CalculationWindow window = new CalculationWindow();
-					window.frame.setVisible(true);
+					window.frmGuiCalculator.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -46,10 +47,11 @@ public class CalculationWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 753, 449);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmGuiCalculator = new JFrame();
+		frmGuiCalculator.setTitle("GUI Calculator");
+		frmGuiCalculator.setBounds(100, 100, 753, 449);
+		frmGuiCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmGuiCalculator.getContentPane().setLayout(null);
 		
 		JButton btn_add = new JButton("Add");
 		btn_add.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -74,29 +76,29 @@ public class CalculationWindow {
 			
 			}});
 		btn_add.setBounds(91, 164, 262, 48);
-		frame.getContentPane().add(btn_add);
+		frmGuiCalculator.getContentPane().add(btn_add);
 		
 		tf_firstNumber = new JTextField();
 		tf_firstNumber.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		tf_firstNumber.setBounds(91, 79, 262, 34);
-		frame.getContentPane().add(tf_firstNumber);
+		frmGuiCalculator.getContentPane().add(tf_firstNumber);
 		tf_firstNumber.setColumns(10);
 		
 		lbl_message = new JLabel("First Number");
 		lbl_message.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lbl_message.setBounds(91, 33, 130, 36);
-		frame.getContentPane().add(lbl_message);
+		frmGuiCalculator.getContentPane().add(lbl_message);
 		
 		tf_secondNumber = new JTextField();
 		tf_secondNumber.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		tf_secondNumber.setColumns(10);
 		tf_secondNumber.setBounds(405, 79, 262, 34);
-		frame.getContentPane().add(tf_secondNumber);
+		frmGuiCalculator.getContentPane().add(tf_secondNumber);
 		
 		lbl_message_1 = new JLabel("Second Number");
 		lbl_message_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lbl_message_1.setBounds(404, 33, 130, 36);
-		frame.getContentPane().add(lbl_message_1);
+		frmGuiCalculator.getContentPane().add(lbl_message_1);
 		
 		btn_substract = new JButton("Substract");
 		btn_substract.addActionListener(new ActionListener() {
@@ -115,17 +117,17 @@ public class CalculationWindow {
 		});
 		btn_substract.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btn_substract.setBounds(405, 164, 262, 48);
-		frame.getContentPane().add(btn_substract);
+		frmGuiCalculator.getContentPane().add(btn_substract);
 		
 		tf_result = new JTextField();
 		tf_result.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		tf_result.setColumns(10);
 		tf_result.setBounds(231, 307, 262, 34);
-		frame.getContentPane().add(tf_result);
+		frmGuiCalculator.getContentPane().add(tf_result);
 		
 		lbl_message_2 = new JLabel("Result:");
 		lbl_message_2.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lbl_message_2.setBounds(91, 305, 96, 36);
-		frame.getContentPane().add(lbl_message_2);
+		frmGuiCalculator.getContentPane().add(lbl_message_2);
 	}
 }
